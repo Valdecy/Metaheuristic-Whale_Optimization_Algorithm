@@ -84,7 +84,7 @@ def update_position(position, leader, a_linear_component = 2, b_linear_component
             
     return updated_position
 
-# GWO Function
+# WOA Function
 def whale_optimization_algorithm(hunting_party = 5, spiral_param = 1,  min_values = [-5,-5], max_values = [5,5], iterations = 50):    
     count = 0
     position = initial_position(hunting_party = hunting_party, min_values = min_values, max_values = max_values)
@@ -92,7 +92,7 @@ def whale_optimization_algorithm(hunting_party = 5, spiral_param = 1,  min_value
 
     while (count <= iterations):
         
-        print("Iteration = ", count)
+        print("Iteration = ", count, leader.iloc[leader['Fitness'].idxmin(),-1])
         
         a_linear_component =  2 - count*( 2/iterations)
         b_linear_component = -1 + count*(-1/iterations)
@@ -102,8 +102,8 @@ def whale_optimization_algorithm(hunting_party = 5, spiral_param = 1,  min_value
         
         count = count + 1 
         
-    print(position.iloc[position['Fitness'].idxmin(),:].copy(deep = True))    
-    return position.iloc[position['Fitness'].idxmin(),:].copy(deep = True)
+    print(leader.iloc[leader['Fitness'].idxmin(),:].copy(deep = True))    
+    return leader.iloc[leader['Fitness'].idxmin(),:].copy(deep = True)
 
 ######################## Part 1 - Usage ####################################
 
