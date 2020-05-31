@@ -61,10 +61,10 @@ def update_position(position, leader, a_linear_component = 2, b_linear_component
                         rand_leader_index = math.floor(position.shape[0]*rand);
                         x_rand            = position[rand_leader_index, :]
                         distance_x_rand   = abs(c_leader*x_rand[j] - position[i,j]) 
-                        position[i,j]     = x_rand[j] - a_leader*distance_x_rand                            
+                        position[i,j]     = np.clip(x_rand[j] - a_leader*distance_x_rand, min_values[j],  max_values[j])                                
                     elif (abs(a_leader) < 1):
                         distance_leader   = abs(c_leader*leader[0,j] - position[i,j]) 
-                        position[i,j]     = leader[0,j] - a_leader*distance_leader                              
+                        position[i,j]     = np.clip(leader[0,j] - a_leader*distance_leader, min_values[j],  max_values[j])                                  
                 elif (p >= 0.5):      
                     distance_Leader       = abs(leader[0,j] - position[i,j])
                     rand                  = int.from_bytes(os.urandom(8), byteorder = "big") / ((1 << 64) - 1)
