@@ -22,6 +22,7 @@ Whale Optimization Algorithm to Minimize Functions with Continuous Variables. Th
 Try online in the **Colab**  my new library - [pyMetaheuristics](https://github.com/Valdecy/pyMetaheuristic).
 
 - Adaptive Random Search ([ Colab Demo ](https://colab.research.google.com/drive/1PbIjDVGAU75Dgxn6I3bpoWovvYA4RYks?usp=sharing))
+- Ant Lion Optimizer ([ Colab Demo ](https://colab.research.google.com/drive/11GWyd-o11nzwjafF37YDbReAJyjV4Zhp?usp=sharing))
 - Artificial Bee Colony Optimization ([ Colab Demo ](https://colab.research.google.com/drive/1IBouxcnhbNLfCoCV5ueNCq0FZBd9E2gu?usp=sharing))
 - Bat Algorithm ([ Colab Demo ](https://colab.research.google.com/drive/1vbUWQ3T8B1XhPrewaFUW9uvCMGmzajk1?usp=sharing))
 - Cross Entropy Method ([ Colab Demo ](https://colab.research.google.com/drive/1tI1YbjbAV_O9TdXWYfu8aAlvadC7Crm_?usp=sharing))
